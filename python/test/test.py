@@ -20,6 +20,13 @@ sp.saveModelTsv('model.tsv')
 sp.initFromSavedModel('model')
 sp.initFromTsv('model.tsv')
 
+sp.loadBaseDocs()
+
 print(np.array(sp.getDocVector('this\tis\ttest', '\t')))
 print(np.array(sp.getDocVector('this is test', ' ')))
 
+
+a= sp.predictOne_(vec)
+for i in a:
+    par= sp.baseDocs_[i[1]]
+    print (i[0],sp.printDoc_(par) )
