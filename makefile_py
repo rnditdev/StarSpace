@@ -48,7 +48,7 @@ normalize.o: src/utils/normalize.cpp src/utils/normalize.h
 	$(CXX) $(CXXFLAGS) -g -c src/utils/normalize.cpp
 
 dict.o: src/dict.cpp src/dict.h src/utils/args.h
-	$(CXX) $(CXXFLAGS) -g -c src/dict.cpp
+	$(CXX) $(INCLUDES) $(CXXFLAGS) -g -c src/dict.cpp
 
 args.o: src/utils/args.cpp src/utils/args.h
 	$(CXX) $(CXXFLAGS) -g -c src/utils/args.cpp
