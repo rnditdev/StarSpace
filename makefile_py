@@ -72,7 +72,7 @@ proj_test: proj.o proj_test.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
 
 data.o: parser.o src/data.cpp src/data.h
-	$(CXX) $(CXXFLAGS) -g -c src/data.cpp -o data.o
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -g -c src/data.cpp -o data.o
 
 utils.o: src/utils/utils.cpp src/utils/utils.h
 	$(CXX) $(CXXFLAGS) -g -c src/utils/utils.cpp -o utils.o
